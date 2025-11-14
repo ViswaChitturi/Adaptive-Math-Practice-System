@@ -57,14 +57,15 @@ Press **q** anytime to quit.
 
 ```mermaid
 flowchart LR
-    A[Start Session\n(Name, Start Level, Count)] --> B[Puzzle Generator\n(by Difficulty)]
-    B --> C[Ask Question\n& Start Timer]
-    C --> D[User Answer]
-    D --> E[Evaluate Correctness\n& Response Time]
-    E --> F[Performance Tracker\n(logs metrics)]
-    F --> G[Adaptive Engine\n(compute momentum)]
-    G -->|Change Level| B
+    A[Start Session: Name, Level, Count] --> B[Puzzle Generator by Difficulty]
+    B --> C[Ask Question and Start Timer]
+    C --> D[Get User Answer]
+    D --> E[Evaluate Correctness and Time]
+    E --> F[Performance Tracker]
+    F --> G[Adaptive Engine]
+    G -->|Adjust Difficulty| B
     F --> H[Session Summary]
+
 ```
 
 ---
